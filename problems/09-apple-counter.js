@@ -29,7 +29,17 @@ appleCounter(obj3); // => 3
 ***********************************************************************/
 
 function appleCounter(appleObj) {
-  // Your code here
+  // go through each key
+  // match they key including word apple
+  //every match is a 1 count
+
+  let count = 0;
+  for(let currentKey in appleObj){
+    if(currentKey.toLowerCase().includes('apple')){
+      count += 1;
+    } 
+  }
+  return count 
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

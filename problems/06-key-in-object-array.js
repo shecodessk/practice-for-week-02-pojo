@@ -20,7 +20,12 @@ keyInObjectArray(objArray, 'animal'); // => false
 ***********************************************************************/
 
 function keyInObjectArray(objArray, keyString) {
-  // Your code here
+  let result = objArray.map( 
+    (object) =>{
+     return (keyString in object)
+    }
+  ) 
+  return result.includes(true)
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

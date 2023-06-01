@@ -12,7 +12,20 @@ console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {app
 ***********************************************************************/
 
 function arrayConverter(array) {
-  // Your code here
+  let obj = {}
+    array.forEach( 
+      (el) => {
+        if(el in obj){
+          obj[el]++
+        } else{
+          obj[el] = 1
+        } 
+    })
+  //go through each array element
+  // if the element doesnt exist as key, turn it into a key and add value as count 1
+  // if element already exists, add count++
+  //return object
+  return obj
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
